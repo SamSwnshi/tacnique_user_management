@@ -3,14 +3,16 @@ import './App.css'
 import Header from './components/Header'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import Home from './components/Home'
-import UserForm from './components/UserForm'
+import AddUserPage from './pages/AddUserPage'
+import EditUserPage from './pages/EditUserPage'
 const App = () => {
   return (
     <BrowserRouter>
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/users' element={<UserForm/>}/>
+        <Route path='/add' element={<AddUserPage/>}/>
+        <Route path='/edit' element={<EditUserPage/>}/>
       </Routes>
     </BrowserRouter>
   )
