@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const UserForm = ({user}) => {
+const UserForm = ({ user, onSave, onCancel }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

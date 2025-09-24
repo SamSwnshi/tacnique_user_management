@@ -1,9 +1,22 @@
 import React from 'react'
+import UserForm from '../components/UserForm'
+import { addUser } from '../service/api'
+import { useNavigate } from 'react-router-dom'
 
 const AddUserPage = () => {
+  const navigate = useNavigate();
+  const handleSave = async (userData) => {
+    try {
+      await addUser(userData);
+      alert('User added successfully!');
+      navigate('/');
+    } catch (error) {
+      alert('Failed to add user. Please try again.');
+    }
+  };
   return (
-    <div>
-      <h1>hi</h1>
+    <div className="container mx-auto p-4">
+      <UserForm onSave={handleSave} onCancel={() => navigate('/')} />
     </div>
   )
 }
