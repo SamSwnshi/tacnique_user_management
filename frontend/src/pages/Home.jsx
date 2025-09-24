@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import UserForm from "./UserForm";
+import UserForm from "../components/UserForm";
 import {getUsers} from '../service/api'
 import UserTable from "./UserTable";
-const API_URL = "https://jsonplaceholder.typicode.com/users";
+import Pagination from '../components/Pagination'
+import FilterPopup from '../components/FilterPop'
 const Home = () => {
     const [allUsers, setAllUsers] = useState([]);
     const [users, setUsers] = useState([]);
