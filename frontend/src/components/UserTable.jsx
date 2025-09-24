@@ -1,6 +1,6 @@
 import React from 'react'
 
-const UserTable = ({users}) => {
+const UserTable = ({ users, onSort, sortColumn, sortDirection, onEdit, onDelete }) => {
     console.log("Data from UserTable",users)
      const getSortIndicator = (column) => {
     if (sortColumn === column) {
