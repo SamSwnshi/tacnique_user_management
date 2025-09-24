@@ -16,8 +16,8 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange, onLim
       <div className="flex items-center space-x-2">
         <span className="text-sm text-gray-700">Items per page:</span>
         <select onChange={(e) => onLimitChange(Number(e.target.value))} value={itemsPerPage} className="px-2 py-1 rounded-md border">
-          <option value="10">10</option>
-          <option value="25">25</option>
+          <option value="10">5</option>
+          <option value="25">15</option>
           <option value="50">50</option>
           <option value="100">100</option>
         </select>

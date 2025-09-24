@@ -7,9 +7,10 @@ const AddUserPage = () => {
   const navigate = useNavigate();
   const handleSave = async (userData) => {
     try {
-      await addUser(userData);
+      const response = await addUser(userData);
+
       alert('User added successfully!');
-      navigate('/');
+      navigate('/', { state: { newUser: { ...userData, id: response.data.id } } });
     } catch (error) {
       alert('Failed to add user. Please try again.');
     }
