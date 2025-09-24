@@ -132,9 +132,11 @@ const Home = () => {
         </button>
       </div>
       <div className="flex justify-end mb-4">
-        <Link to="/add">Add New User</Link>
+        
+        <Link to="/add">
+        <button>Add New User</button></Link>
       </div>
-      <UserForm />
+      
       <UserTable
         users={currentItems}
         onSort={handleSort}
